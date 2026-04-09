@@ -141,7 +141,7 @@ jobs:
 ### Enabling auto-merge
 
 If you are using [the auto-merge feature](https://docs.github.com/en/github/collaborating-with-pull-requests/incorporating-changes-from-a-pull-request/automatically-merging-a-pull-request) on your repository,
-you can set up an action that will enable Dependabot PRs to merge once CI and other [branch protection rules](https://docs.github.com/en/github/administering-a-repository/defining-the-mergeability-of-pull-requests/managing-a-branch-protection-rule) are met. Enabling auto-merge requires [write permissions](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/incorporating-changes-from-a-pull-request/automatically-merging-a-pull-request#enabling-auto-merge) on the repository. The `GITHUB_TOKEN` satisfies this requirement when configured with `contents: write` and `pull-requests: write`.
+you can set up an action that will enable Dependabot PRs to merge once CI and other [branch protection rules](https://docs.github.com/en/github/administering-a-repository/defining-the-mergeability-of-pull-requests/managing-a-branch-protection-rule) are met. Enabling auto-merge requires [write permissions](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/incorporating-changes-from-a-pull-request/automatically-merging-a-pull-request#enabling-auto-merge) on the repository. When using `pull_request_target`, the `GITHUB_TOKEN` [has read/write access](https://docs.github.com/en/actions/reference/workflows-and-actions/workflow-syntax#permissions) and satisfies this requirement when configured with `contents: write` and `pull-requests: write`.
 
 For example, if you want to automatically merge all patch updates to Rails:
 
